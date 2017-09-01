@@ -16,23 +16,25 @@ public class Personas {
             private String nombre;
             private String apellido;
             private String correo;
-            private Date fecha;
+            private String fecha;
             private String pais;
             private String telefono;
             private String contrasena;
-            private ArrayList no_leidos=new ArrayList();
-            private ArrayList leidos=new ArrayList();
-            private ArrayList no_deseados=new ArrayList();
-            private ArrayList spam=new ArrayList();
-            private ArrayList borradores;
-            private ArrayList enviados=new ArrayList();
-            private ArrayList eliminados=new ArrayList();
-            private ArrayList importantes=new ArrayList();
+            private ArrayList<Mensaje>mensajes=new ArrayList();
+           ///
+            private ArrayList<Mensaje> no_leidos=new ArrayList();
+            private ArrayList<Mensaje> leidos=new ArrayList();
+            private ArrayList<Mensaje> no_deseados=new ArrayList();
+            private ArrayList<Mensaje> spam=new ArrayList();
+            private ArrayList<Mensaje> borradores=new ArrayList();
+            private ArrayList<Mensaje> enviados=new ArrayList();
+            private ArrayList<Mensaje> eliminados=new ArrayList();
+            private ArrayList<Mensaje> importantes=new ArrayList();
 
     public Personas() {
     }
 
-    public Personas(String nombre, String apellido, String correo, Date fecha, String pais, String telefono, String contrasena, ArrayList borradores) {
+    public Personas(String nombre, String apellido, String correo, String fecha, String pais, String telefono, String contrasena) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.correo = correo;
@@ -40,7 +42,6 @@ public class Personas {
         this.pais = pais;
         this.telefono = telefono;
         this.contrasena = contrasena;
-        this.borradores = borradores;
     }
 
     public String getNombre() {
@@ -67,11 +68,11 @@ public class Personas {
         this.correo = correo;
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
-    public void setFecha(Date fecha) {
+    public void setFecha(String fecha) {
         this.fecha = fecha;
     }
 
@@ -99,68 +100,83 @@ public class Personas {
         this.contrasena = contrasena;
     }
 
-    public ArrayList getNo_leidos() {
+    public ArrayList<Mensaje> getMensajes() {
+        return mensajes;
+    }
+
+    public void setMensajes(ArrayList<Mensaje> mensajes) {
+        this.mensajes = mensajes;
+    }
+
+    public ArrayList<Mensaje> getNo_leidos() {
         return no_leidos;
     }
 
-    public void setNo_leidos(ArrayList no_leidos) {
+    public void setNo_leidos(ArrayList<Mensaje> no_leidos) {
         this.no_leidos = no_leidos;
     }
 
-    public ArrayList getLeidos() {
+    public ArrayList<Mensaje> getLeidos() {
         return leidos;
     }
 
-    public void setLeidos(ArrayList leidos) {
+    public void setLeidos(ArrayList<Mensaje> leidos) {
         this.leidos = leidos;
     }
 
-    public ArrayList getNo_deseados() {
+    public ArrayList<Mensaje> getNo_deseados() {
         return no_deseados;
     }
 
-    public void setNo_deseados(ArrayList no_deseados) {
+    public void setNo_deseados(ArrayList<Mensaje> no_deseados) {
         this.no_deseados = no_deseados;
     }
 
-    public ArrayList getSpam() {
+    public ArrayList<Mensaje> getSpam() {
         return spam;
     }
 
-    public void setSpam(ArrayList spam) {
+    public void setSpam(ArrayList<Mensaje> spam) {
         this.spam = spam;
     }
 
-    public ArrayList getBorradores() {
+    public ArrayList<Mensaje> getBorradores() {
         return borradores;
     }
 
-    public void setBorradores(ArrayList borradores) {
+    public void setBorradores(ArrayList<Mensaje> borradores) {
         this.borradores = borradores;
     }
 
-    public ArrayList getEnviados() {
+    public ArrayList<Mensaje> getEnviados() {
         return enviados;
     }
 
-    public void setEnviados(ArrayList enviados) {
+    public void setEnviados(ArrayList<Mensaje> enviados) {
         this.enviados = enviados;
     }
 
-    public ArrayList getEliminados() {
+    public ArrayList<Mensaje> getEliminados() {
         return eliminados;
     }
 
-    public void setEliminados(ArrayList eliminados) {
+    public void setEliminados(ArrayList<Mensaje> eliminados) {
         this.eliminados = eliminados;
     }
 
-    public ArrayList getImportantes() {
+    public ArrayList<Mensaje> getImportantes() {
         return importantes;
     }
 
-    public void setImportantes(ArrayList importantes) {
+    public void setImportantes(ArrayList<Mensaje> importantes) {
         this.importantes = importantes;
     }
+
+    
+    @Override
+    public String toString() {
+        return nombre+" "+apellido;
+    }
+   
             
 }
