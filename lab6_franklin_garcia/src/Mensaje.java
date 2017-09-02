@@ -12,11 +12,12 @@ public class Mensaje {
     private String mensaje;
     private int clasificar;
     private int destinatario;
+    private int emisor;
     
     public Mensaje() {
     }
 
-    public Mensaje(String mensaje, int clasificar, int destinatario) {
+    public Mensaje(String mensaje, int clasificar, int destinatario, int emisor) {
         this.mensaje = mensaje;
         this.clasificar = clasificar;
         this.destinatario = destinatario;
@@ -44,6 +45,14 @@ public class Mensaje {
 
     public void setDestinatario(int destinatario) {
         this.destinatario = destinatario;
+    }
+
+    public int getEmisor() {
+        return emisor;
+    }
+
+    public void setEmisor(int emisor) {
+        this.emisor = emisor;
     }
   
     

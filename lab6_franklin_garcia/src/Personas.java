@@ -42,7 +42,7 @@ public class Personas {
         this.pais = pais;
         this.telefono = telefono;
         this.contrasena = contrasena;
-    }
+}
 
     public String getNombre() {
         return nombre;
@@ -172,10 +172,12 @@ public class Personas {
         this.importantes = importantes;
     }
 
+   
+
     
     @Override
     public String toString() {
-        return nombre+" "+apellido;
+        return nombre;
     }
    
             

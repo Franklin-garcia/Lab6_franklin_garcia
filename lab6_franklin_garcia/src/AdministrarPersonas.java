@@ -53,10 +53,11 @@ public class AdministrarPersonas {
     //metodos de adiminstracion
 
     public void escribirPersonas() {
-        FileWriter ft = null;
+        FileWriter fw = null;
         BufferedWriter bw = null;
         try {
-            //String nombre, String apellido, String correo, Date fecha, String pais, String telefono, String contrasena
+            fw = new FileWriter(archivo, true);
+            bw = new BufferedWriter(fw);
             for (Personas t : listaPersonas) {
                 bw.write(t.getNombre() + ";");
                 bw.write(t.getApellido() + ";");
@@ -69,6 +70,7 @@ public class AdministrarPersonas {
                     bw.write(h.getMensaje() + ",");
                     bw.write(h.getClasificar() + ",");
                     bw.write(h.getDestinatario() + ",");
+                    bw.write(h.getEmisor());
                 }
                 bw.write(",");
             }
@@ -77,7 +79,7 @@ public class AdministrarPersonas {
         } finally {
             try {
                 bw.close();
-                ft.close();
+                fw.close();
             } catch (Exception e) {
 
             }
@@ -92,36 +94,12 @@ public class AdministrarPersonas {
             sc = new Scanner(archivo);
             sc.useDelimiter(";");
             while (sc.hasNext()) {
-                String nombre;
-                String apellido;
-                String correo;
-                String fecha;
-                String pais;
-                String telefono;
-                String contrasena;
-
-                ArrayList<Mensaje> temp = new ArrayList();
-                nombre = sc.next();
-                apellido = sc.next();
-                correo = sc.next();
-                fecha = sc.next();
-                pais = sc.next();
-                telefono = sc.next();
-                contrasena = sc.next();
-
-                Scanner s2 = new Scanner(sc.next());
-                s2.useDelimiter(";");
-                while (s2.hasNext()) {
-                    temp.add(new Mensaje(s2.next(),s2.nextInt(),s2.nextInt())); 
-                }
-                listaPersonas.add(new Personas(nombre, apellido, correo, fecha, pais, telefono, contrasena));
-                listaPersonas.get(listaPersonas.size() - 1).setBorradores(temp);
-
+                listaPersonas.add(new Personas(sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next(), sc.next()));               
             }
         } catch (Exception ex) {
         } finally {
             sc.close();
         }
-
     }
+
 }

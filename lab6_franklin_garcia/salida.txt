@@ -1,0 +1,1 @@
+Franklin;garcia;hhh@unitec.edu;2017//09//18;Mexico;222;11;,Gabriel;Alvarado;vvv@unitec.edu;2017//09//20;Honduras;q22;222;,Kenneth;garcia;111@unitec.edu;2017//09//13;Mexico;1212;121;,Josue;Garcia;ff@unitec.edu;2017//09//18;Guatemala;11;11;,,Gabriel;Alvarado;vvv@unitec.edu;2017//09//20;Honduras;q22;222;,,Kenneth;garcia;111@unitec.edu;2017//09//13;Mexico;1212;121;,
