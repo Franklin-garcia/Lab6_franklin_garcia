@@ -513,7 +513,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-
+        ap.cargarArchivo();
         ap.getListaPersonas().get(indice).setNombre(tf_nombre1.getText());
         ap.getListaPersonas().get(indice).setApellido(tf_apellido1.getText());
         ap.getListaPersonas().get(indice).setCorreo(tf_correo1.getText() + "@unitec.edu");
@@ -525,6 +525,7 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3MouseClicked
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        ap.cargarArchivo();
         ap.getListaPersonas().remove(cb_eliminar.getSelectedIndex());
         ap.escribirPersonas();
         ap.cargarArchivo();

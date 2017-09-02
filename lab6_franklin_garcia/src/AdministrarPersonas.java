@@ -56,7 +56,7 @@ public class AdministrarPersonas {
         FileWriter fw = null;
         BufferedWriter bw = null;
         try {
-            fw = new FileWriter(archivo, true);
+            fw = new FileWriter(archivo, false);
             bw = new BufferedWriter(fw);
             for (Personas t : listaPersonas) {
                 bw.write(t.getNombre() + ";");
